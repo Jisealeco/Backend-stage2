@@ -28,5 +28,10 @@ app.get("/test-db", async (req, res) => {
 app.use("/api/profiles", profileRoutes);
 app.use("/api/profiles/search", searchRoutes);
 
-const PORT = 4000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+if (require.main === module) {
+  app.listen(4000, () => {
+    console.log("Server running on port 4000");
+  });
+}
+
+module.exports = app;
