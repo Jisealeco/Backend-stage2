@@ -1,4 +1,5 @@
 const express = require("express");
+require("dotenv").config();
 const app = express();
 const pool = require("./db/db");
 const profileRoutes = require("./routes/profiles");
