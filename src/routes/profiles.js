@@ -165,12 +165,13 @@ router.get("/", async (req, res) => {
       }
     });
 
-  }catch (err) {
+  } catch (err) {
   console.error("FULL ERROR:", err); // ADD THIS
   res.status(500).json({
     success: false,
     error: err.message // CHANGE THIS
   });
 }
+});
 
 module.exports = router;
